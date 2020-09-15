@@ -4,6 +4,9 @@
     name: '*'
     state: latest
 
+- name: yum clean
+  shell: yum clean all
+
 - name: install epel-release
   yum:
     name: epel-release

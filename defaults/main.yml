@@ -10,7 +10,6 @@ os_common_packages:
     - nload
     - sysstat
     - iotop
-    - iostat
     - dstat
     - tcptraceroute
     - wget
