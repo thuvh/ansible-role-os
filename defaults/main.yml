@@ -16,7 +16,6 @@ os_common_packages:
     - curl
     - dnstop
     - bash-completion
-    - bash-completion-extras
     - psmisc
     - tree
   yum:

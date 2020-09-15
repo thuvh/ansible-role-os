@@ -1,11 +1,12 @@
 ---
+- name: yum update cache
+  yum:
+    update_cache: true
+
 - name: refresh os
   yum:
     name: '*'
     state: latest
-
-- name: yum clean
-  shell: yum clean all
 
 - name: install epel-release
   yum:
