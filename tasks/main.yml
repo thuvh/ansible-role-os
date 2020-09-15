@@ -16,4 +16,4 @@
     name: vm.swappiness
     value: '1'
     sysctl_file: /etc/sysctl.d/99-common-os.conf
-    reload: yes
+    reload: true

@@ -1,12 +1,12 @@
 ---
 - name: refresh os
   apt:
-    update_cache: yes
+    update_cache: true
     cache_valid_time: 86400
     name: "*"
     state: latest
-    autoclean: yes
-    autoremove: yes
+    autoclean: true
+    autoremove: true
 
 - name: install common packages
   apt:
