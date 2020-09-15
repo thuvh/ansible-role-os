@@ -14,6 +14,7 @@ platforms:
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /run/dbus/system_bus_socket:/run/dbus/system_bus_socket:ro
+      - /usr/share/zoneinfo:/usr/share/zoneinfo:ro
     privileged: true
     pre_build_image: true
 provisioner:
