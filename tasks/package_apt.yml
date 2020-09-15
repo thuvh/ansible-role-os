@@ -1,0 +1,30 @@
+---
+- name: refresh os
+  apt:
+    update_cache: yes
+    cache_valid_time: 86400
+    name: "*"
+    state: latest
+    autoclean: yes
+    autoremove: yes
+
+- name: install common packages
+  apt:
+    name:
+      - vim
+      - git
+      - build-essential
+      - tmux
+      - htop
+      - nload
+      - sysstat
+      - iotop
+      - iostat
+      - dstat
+      - tcptraceroute
+      - wget
+      - curl
+      - dnstop
+      - pstree
+      - tree
+    state: latest

@@ -1,0 +1,33 @@
+---
+- name: refresh os
+  yum:
+    name: '*'
+    state: latest
+
+- name: install epel-release
+  yum:
+    name: epel-release
+    state: latest
+
+- name: install common packages
+  yum:
+    name:
+      - vim
+      - git
+      - build-essential
+      - tmux
+      - htop
+      - nload
+      - sysstat
+      - iotop
+      - iostat
+      - dstat
+      - tcptraceroute
+      - wget
+      - curl
+      - dnstop
+      - bash-completion
+      - bash-completion-extras
+      - psmisc
+      - tree
+    state: latest

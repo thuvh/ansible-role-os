@@ -2,3 +2,18 @@
 - name: set timezone
   timezone:
     name: '{{ os_timezone_name }}'
+
+- name: upgrade packages for debian
+  include_tasks: package_apt.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: upgrade packages for redhat
+  include_tasks: package_yum.yml
+  when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+
+- name: config vm swappiness
+  sysctl:
+    name: vm.swappiness
+    value: '1'
+    sysctl_file: /etc/sysctl.d/99-common-os.conf
+    reload: yes
