@@ -11,23 +11,5 @@
 
 - name: install common packages
   yum:
-    name:
-      - vim
-      - git
-      - build-essential
-      - tmux
-      - htop
-      - nload
-      - sysstat
-      - iotop
-      - iostat
-      - dstat
-      - tcptraceroute
-      - wget
-      - curl
-      - dnstop
-      - bash-completion
-      - bash-completion-extras
-      - psmisc
-      - tree
+    name: '{{ os_common_packages.yum }}'
     state: latest

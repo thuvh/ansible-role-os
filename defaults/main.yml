@@ -1,2 +1,42 @@
 ---
 os_timezone_name: 'Asia/Ho_Chi_Minh'
+os_common_packages:
+  apt:
+    - vim
+    - git
+    - build-essential
+    - tmux
+    - htop
+    - nload
+    - sysstat
+    - iotop
+    - iostat
+    - dstat
+    - tcptraceroute
+    - wget
+    - curl
+    - dnstop
+    - bash-completion
+    - bash-completion-extras
+    - psmisc
+    - tree
+  yum:
+    - vim
+    - git
+    - build-essential
+    - tmux
+    - htop
+    - nload
+    - sysstat
+    - iotop
+    - iostat
+    - dstat
+    - tcptraceroute
+    - wget
+    - curl
+    - dnstop
+    - bash-completion
+    - bash-completion-extras
+    - psmisc
+    - tree
+    - yum-plugin-versionlock

@@ -10,21 +10,5 @@
 
 - name: install common packages
   apt:
-    name:
-      - vim
-      - git
-      - build-essential
-      - tmux
-      - htop
-      - nload
-      - sysstat
-      - iotop
-      - iostat
-      - dstat
-      - tcptraceroute
-      - wget
-      - curl
-      - dnstop
-      - pstree
-      - tree
+    name: '{{ os_common_packages.apt }}'
     state: latest
