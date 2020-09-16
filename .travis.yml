@@ -8,14 +8,13 @@ env:
   matrix:
     -
       MOLECULE_DISTRO: centos7
-      MOLECULE_PLATFORM_VOLUMES:
-        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      MOLECULE_PLATFORM_VOLUMES: "['/sys/fs/cgroup:/sys/fs/cgroup:ro']"
     -
       MOLECULE_DISTRO: ubuntu1804
-      MOLECULE_PLATFORM_VOLUMES:
-        - /sys/fs/cgroup:/sys/fs/cgroup:ro
-        - /run/dbus/system_bus_socket:/run/dbus/system_bus_socket:ro
-        - /usr/share/zoneinfo:/usr/share/zoneinfo:ro
+      MOLECULE_PLATFORM_VOLUMES: >
+        "['/sys/fs/cgroup:/sys/fs/cgroup:ro',
+        '/run/dbus/system_bus_socket:/run/dbus/system_bus_socket:ro',
+        '/usr/share/zoneinfo:/usr/share/zoneinfo:ro']"
 install:
   # Install test dependencies.
   - pip install molecule yamllint ansible-lint docker
