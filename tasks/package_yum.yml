@@ -1,7 +1,8 @@
 ---
-- name: yum update cache
-  yum:
-    update_cache: true
+- name: clean yum
+  command: yum clean all
+  args:
+    warn: false
 
 - name: refresh os
   yum:

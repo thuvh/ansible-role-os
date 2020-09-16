@@ -21,13 +21,11 @@ os_common_packages:
   yum:
     - vim
     - git
-    - build-essential
     - tmux
     - htop
     - nload
     - sysstat
     - iotop
-    - iostat
     - dstat
     - tcptraceroute
     - wget
