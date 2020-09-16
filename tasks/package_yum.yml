@@ -1,12 +1,8 @@
 ---
-- name: clean yum
-  command: yum clean all
-  args:
-    warn: false
-
 - name: refresh os
   yum:
     name: '*'
+    update_cache: true
     state: latest
 
 - name: install epel-release
