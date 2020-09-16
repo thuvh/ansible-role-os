@@ -8,6 +8,7 @@ env:
   matrix:
     -
       MOLECULE_DISTRO: centos7
+      MOLECULE_PLATFORM_VOLUMES: "['/sys/fs/cgroup:/sys/fs/cgroup:ro',]"
     -
       MOLECULE_DISTRO: ubuntu1804
       MOLECULE_PLATFORM_VOLUMES: >
