@@ -12,6 +12,7 @@ os_common_packages:
     - iotop
     - dstat
     - tcptraceroute
+    - net-tools
     - wget
     - curl
     - dnstop
@@ -22,6 +23,7 @@ os_common_packages:
     - vim
     - git
     - tmux
+    - net-tools
     - htop
     - nload
     - sysstat
